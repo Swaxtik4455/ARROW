@@ -15,6 +15,3 @@ fastapi>=0.115.0
 uvicorn[standard]>=0.32.0
 pydantic>=2.9.0cd "C:\Users\Swastik\python ai assistant"
 
-git init -b main
-git add .
-git status

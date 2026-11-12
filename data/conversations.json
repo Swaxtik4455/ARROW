@@ -1,0 +1,16 @@
+[
+  {
+    "id": "23467e52",
+    "timestamp": "2026-11-13 00:45:57",
+    "role": "user",
+    "mode": "normal",
+    "content": "weather"
+  },
+  {
+    "id": "b9f60c42",
+    "timestamp": "2026-11-13 00:46:01",
+    "role": "assistant",
+    "mode": "normal",
+    "content": "Weather in Lucknow, India: Clear sky, 20.7°C, humidity 80%, wind 4.1 km/h. Tomorrow's forecast: 19.3°C to 29.2°C."
+  }
+]

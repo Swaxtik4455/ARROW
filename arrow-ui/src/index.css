@@ -1,0 +1,162 @@
+:root {
+  --bg-void: #03060a;
+  --bg-panel: rgba(7, 17, 27, 0.76);
+  --bg-panel-hover: rgba(12, 28, 44, 0.88);
+  --cyan-primary: #5ce1e6;
+  --cyan-bright: #7ef9ff;
+  --cyan-muted: #2c6e7a;
+  --cyan-border: rgba(92, 225, 230, 0.28);
+  --cyan-border-strong: rgba(92, 225, 230, 0.55);
+  --red-accent: #e05a47;
+  --text-primary: #e6f4f8;
+  --text-secondary: #7ea3b0;
+  --font-display: "Rajdhani", "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "Consolas", monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--bg-void);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Technical HUD Background Grid + Subtle Radial Vignette */
+.hud-canvas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-void);
+  background-image:
+    radial-gradient(circle at 42% 50%, rgba(22, 78, 99, 0.14) 0%, rgba(3, 6, 10, 0.94) 68%),
+    linear-gradient(to right, rgba(92, 225, 230, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(92, 225, 230, 0.045) 1px, transparent 1px);
+  background-size: 100% 100%, 34px 34px, 34px 34px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Frameless Window Drag Bar */
+.titlebar {
+  height: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px 0 18px;
+  background: rgba(4, 10, 16, 0.85);
+  border-bottom: 1px solid rgba(92, 225, 230, 0.12);
+  -webkit-app-region: drag;
+  z-index: 50;
+}
+
+.titlebar-label {
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.titlebar-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  -webkit-app-region: no-drag;
+}
+
+.win-btn {
+  width: 26px;
+  height: 20px;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.15s ease;
+}
+
+.win-btn:hover {
+  color: var(--cyan-bright);
+  border-color: var(--cyan-border);
+  background: rgba(92, 225, 230, 0.08);
+}
+
+.win-btn.close:hover {
+  color: #ffffff;
+  border-color: rgba(224, 90, 71, 0.65);
+  background: rgba(224, 90, 71, 0.25);
+}
+
+/* Main 5-Region Workspace */
+.hud-workspace {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  height: calc(100% - 30px);
+  padding: 20px 26px 22px 26px;
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  grid-template-rows: 1fr auto;
+  gap: 16px 24px;
+}
+
+/* Custom Thin HUD Scrollbar */
+.hud-scroll {
+  user-select: text;
+}
+.hud-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+.hud-scroll::-webkit-scrollbar-track {
+  background: rgba(4, 12, 20, 0.4);
+}
+.hud-scroll::-webkit-scrollbar-thumb {
+  background: rgba(92, 225, 230, 0.28);
+  border-radius: 2px;
+}
+.hud-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(92, 225, 230, 0.55);
+}
+
+/* Corner Bracket Utility */
+.bracket-box {
+  position: relative;
+}
+.bracket-box::before,
+.bracket-box::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-color: var(--cyan-primary);
+  border-style: solid;
+  pointer-events: none;
+  opacity: 0.75;
+}
+.bracket-box::before {
+  top: -4px;
+  left: -6px;
+  border-width: 1.5px 0 0 1.5px;
+}
+.bracket-box::after {
+  bottom: -4px;
+  left: -6px;
+  border-width: 0 0 1.5px 1.5px;
+}

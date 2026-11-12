@@ -1,0 +1,27 @@
+{
+  "assistant_name": "ARROW",
+  "wake_word": "arrow",
+  "gemini_model": "gemini-2.5-flash",
+  "response_mode": "normal",
+  "history_limit": 12,
+  "tts_engine": "pyttsx3",
+  "speech_rate": 180,
+  "speech_volume": 0.95,
+  "voice_index": 0,
+  "listen_timeout": 5,
+  "phrase_time_limit": 12,
+  "default_city": "Lucknow",
+  "file_search_root": "C:\\Users\\Swastik\\Documents",
+  "custom_shortcuts": {
+    "google": "https://www.google.com",
+    "youtube": "https://www.youtube.com",
+    "gmail": "https://mail.google.com",
+    "github": "https://github.com",
+    "linkedin": "https://www.linkedin.com",
+    "wikipedia": "https://en.wikipedia.org",
+    "stackoverflow": "https://stackoverflow.com",
+    "chatgpt": "https://chat.openai.com",
+    "gemini": "https://gemini.google.com"
+  },
+  "start_on_boot": false
+}

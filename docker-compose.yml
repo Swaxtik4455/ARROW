@@ -1,0 +1,13 @@
+services:
+  arrow-bridge:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: arrow-ai-bridge
+    ports:
+      - "127.0.0.1:8765:8765"
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped

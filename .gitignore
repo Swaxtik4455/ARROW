@@ -1,0 +1,34 @@
+# Environment & Secrets
+.env
+.env.*
+!.env.example
+
+# Python Virtual Environments & Cache
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+
+# Local SQLite / Runtime Data (keep folder structure if needed, ignore personal DBs)
+*.db
+*.sqlite
+*.sqlite3
+*.log
+
+# Node & Electron Build Outputs
+arrow-ui/node_modules/
+arrow-ui/dist/
+arrow-ui/dist-electron/
+arrow-ui/release/
+npm-debug.log*
+
+# OS & Editor Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

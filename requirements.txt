@@ -1,0 +1,20 @@
+google-genai>=1.0.0
+python-dotenv>=1.0.1
+SpeechRecognition>=3.10.4
+pyaudio>=0.2.14
+sounddevice>=0.4.7
+numpy>=1.26.4
+pyttsx3>=2.91
+gTTS>=2.5.3
+pygame>=2.6.0
+requests>=2.32.3
+wikipedia>=1.4.0
+psutil>=6.0.0
+Pillow>=10.4.0
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+pydantic>=2.9.0cd "C:\Users\Swastik\python ai assistant"
+
+git init -b main
+git add .
+git status

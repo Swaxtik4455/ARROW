@@ -89,7 +89,7 @@ class GeminiEngine:
         """Generates a conversational response using the configured free-tier Gemini model."""
         try:
             client = self._get_client()
-            model_name = config.get("gemini_model", "gemini-2.5-flash")
+            model_name = config.get("gemini_model", "gemini-3.5-flash-lite")
             system_instruction = self._build_system_prompt(mode_override)
 
             if use_history:
@@ -134,7 +134,7 @@ class GeminiEngine:
         """
         try:
             client = self._get_client()
-            model_name = config.get("gemini_model", "gemini-2.5-flash")
+            model_name = config.get("gemini_model", "gemini-3.5-flash-lite")
             now_str = datetime.now().strftime("%Y-%m-%d %H:%M (%A)")
 
             classifier_prompt = (
